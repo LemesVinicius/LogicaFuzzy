@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-app="MeuApp">
+<div ng-controller="MeuController as controller">
+<div>
+<label for="txtnome">Entre com seu Nome:</label>
+<input type="text" id="txtnome" name="txtnome" ng-model="controller.Pessoa.nome">
+<br>
+<br>
+<label for="txtaltura">Entre com a sua Altura:</label>
+<input type="number" id="txtaltura" name="txtname" ng-model="controller.Pessoa.altura">
+<br>
+<br>
+<button ng-click="controller.defaltura()">Definir Altura</button>
+</div>
+
+<div>
+<h2>Definição Binaria:</h2>
+{{controller.Pessoa.defaltbin}}
+</div>
+
+<div>
+<h2>Definição Fuzzy:</h2>
+{{controller.Pessoa.defaltfuzzy}}
+</div>
+
+
+</div>
+
+<script src="js/angular.min.js"></script>
+<script src="js/controllerAltura.js"></script>
+</body>
+</html>
